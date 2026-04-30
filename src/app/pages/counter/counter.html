@@ -1,0 +1,9 @@
+<h1>Counter : {{ counter }}</h1>
+<h1>Counter : {{ counterSignal() }}</h1>
+<hr>
+<p>This is a simple example of a counter component.</p>
+<div class="counter">
+  <button (click)="increaseBy(-1)">-</button>
+  <button (click)="increaseBy(1)">+</button>
+  <button (click)="reset()">Reset</button>
+</div>
