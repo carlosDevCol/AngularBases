@@ -1,0 +1,18 @@
+<h3>{{ listName() ? listName() : 'Listado de Personajes' }}</h3>
+<ol>
+  @for (character of characters(); track character.id) {
+    <li>
+      @if (character.power >= 3000) {
+        <span>{{ character.name }} </span>
+        <strong
+          [class.text-danger]="character.power > 9000"
+          [class.text-primary]="character.power < 9000"
+          >({{ character.power }})</strong
+        >
+      } @else {
+        <strong>Personaje poco poderoso</strong>
+      }
+      <!-- <strong [class.text-danger]="character.power > 9000">({{ character.power}})</strong> -->
+    </li>
+  }
+</ol>
